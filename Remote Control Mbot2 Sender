@@ -1,0 +1,45 @@
+import cyberpi
+import event
+import time
+# connect to WiFi
+cyberpi.wifi.connect("TUBMANLAWS_NET", "Tubman24!")
+while not cyberpi.wifi.is_connect():
+    pass
+# Connection to WiFi is established at this point
+# So, print connected! on the display
+cyberpi.console.println('Connected!')
+
+@event.is_press('up')
+def is_btn_press():
+    cyberpi.mesh_broadcast.set("up")
+    cyberpi.led.on(208, 2, 27, "all")
+    time.sleep(1)
+    cyberpi.led.on(0, 0, 0, "all")
+
+@event.is_press('down')
+def is_btn_press():
+    cyberpi.mesh_broadcast.set("down")
+    cyberpi.led.on(208, 2, 27, "all")
+    time.sleep(1)
+    cyberpi.led.on(0, 0, 0, "all")
+
+@event.is_press('left')
+def is_btn_press():
+    cyberpi.mesh_broadcast.set("left")
+    cyberpi.led.on(208, 2, 27, "all")
+    time.sleep(1)
+    cyberpi.led.on(0, 0, 0, "all")
+
+@event.is_press('right')
+def is_btn_press():
+    cyberpi.mesh_broadcast.set("right")
+    cyberpi.led.on(208, 2, 27, "all")
+    time.sleep(1)
+    cyberpi.led.on(0, 0, 0, "all")
+
+@event.is_press('middle')
+def is_btn_press():
+    cyberpi.mesh_broadcast.set("middle")
+    cyberpi.led.on(208, 2, 27, "all")
+    time.sleep(1)
+    cyberpi.led.on(0, 0, 0, "all")
