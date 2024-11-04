@@ -1,0 +1,33 @@
+import cyberpi
+import event
+import mbot2
+
+# connect to WiFi
+cyberpi.wifi.connect("TUBMANLAWS_NET", "Tubman24!")
+while not cyberpi.wifi.is_connect():
+ pass
+
+# Connection to WiFi is established at this point
+# So, print connected! on the display
+cyberpi.console.println('Connected!')
+
+
+@event.mesh_broadcast('up')
+def on_mesh_broadcast():
+    mbot2.forward()
+    cyberpi.led.play("rainbow")
+
+@event.mesh_broadcast('down')
+def on_mesh_broadcast():
+    mbot2.backward()
+    cyberpi.led.play("rainbow") 
+
+@event.mesh_broadcast('left')
+def on_mesh_broadcast():
+    mbot2.turn_left()
+    cyberpi.led.play("rainbow")
+
+@event.mesh_broadcast('right')
+def on_mesh_broadcast():
+    mbot2.turn_right()
+    cyberpi.led.play("rainbow")
