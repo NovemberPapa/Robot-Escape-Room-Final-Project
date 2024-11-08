@@ -3,7 +3,7 @@ import event
 import mbot2
 
 # connect to WiFi
-cyberpi.wifi.connect("TUBMANLAWS_NET", "Tubman24!")
+cyberpi.wifi.connect("Woah", "hellodudeman")
 while not cyberpi.wifi.is_connect():
  pass
 
@@ -31,3 +31,12 @@ def on_mesh_broadcast():
 def on_mesh_broadcast():
     mbot2.turn_right()
     cyberpi.led.play("rainbow")
+
+@event.mesh_broadcast('middle')
+def on_mesh_broadcast():
+    mbot2.forward(0)
+    cyberpi.led.play("rainbow")
+
+@event.mesh_broadcast('a')
+def on_mesh_broadcast():
+    mbot2.forward(100)
