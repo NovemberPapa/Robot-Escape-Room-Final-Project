@@ -1,0 +1,42 @@
+import cyberpi
+import event
+import time
+
+@event.mesh_broadcast('a')
+def on_mesh_broadcast():
+    r = 0
+    g = 0
+    b = 0
+    for led_num in range(1,6, 1):
+        cyberpi.led.on(r, g, b, led_num)
+        g += 40
+        b += 30
+
+    for led_num in range(1,6, 2):
+        cyberpi.led.on(r, g, b, led_num)
+        g += 60
+        b += 70
+
+    for count in range(30):
+        cyberpi.led.move(1)
+        time.sleep(0.1)
+    cyberpi.led.off()
+
+@event.mesh_broadcast('b')
+def on_mesh_broadcast():
+
+    r = 255
+    g = 0
+    b = 0
+    for led_num in range(1,6, 1):
+        cyberpi.led.on(r, g, b, led_num)
+
+
+    for led_num in range(1,6, 2):
+        cyberpi.led.on(r, g, b, led_num)
+        g += 20
+
+    for count in range(30):
+        cyberpi.led.move(1)
+        time.sleep(0.1)
+    cyberpi.led.off()
