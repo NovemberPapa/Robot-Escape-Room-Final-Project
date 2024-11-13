@@ -11,7 +11,7 @@ Ex[["alex_",123], ["sam__", 124], ["idk__", 124], [], [], []]
 This example list holds 3 players times with 3 empty placeholders. Each list in the list represents a rank on the leaderboard
 which can only hold 6 positions. The parameter -newscore- is the new time in SECONDS from the latest game played. It takes this new time and adds an entry
 to the leaderboards if it is less than any current entry OR there is an empty spot in the list.
-Technically, the newscore value can only go up to 6049 seconds.
+Technically, the newscore value can only go up to 6000 seconds.
 The name that is entered can only be 5 letters, numbers, or "_" due to space on cyberpi. 
 The list does NOT save after the cyberpi is reset or turned off. 
 
@@ -19,7 +19,7 @@ displayscores(scores) Takes a list of 6 lists and displays a highscore rank on t
 The function does not remove the display. Whatever the next function to go hould clear display or I can update the code to clear after pressing a button. idk
 
 the code in hashes below is test code if you want to try this out. copy/paste this whole code into mblock.
-you can update the newtime variable to be whatever (<=6049 seconds) and the current scores list (just keep names with 5 characters).
+you can update the newtime variable to be whatever (<=6000 seconds) and the current scores list (just keep names with 5 characters).
 Ex of list
 [[], [], [], [], [], []] this has no entries (the cyberpi just turned on and a game hasn't been completed yet)
 [["alex_",123], ["sam__", 124], ["idk__", 124], [], [], []] this list has 3 entries, 3 games have aready happened.
@@ -184,6 +184,7 @@ def displayscores(scores):
         display1 = display1 + str(place)+'.'+name+' '+(minute)+'m'+(sec)+"s  "
         place = place + 1
     cyberpi.display.show_label(display1, 16, 'center')
+    return 
 
 
                     
