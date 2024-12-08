@@ -1,7 +1,6 @@
 # Group 4 - Robot Escape Room Project:
 
 Goal of Our Project:
-=======
 Our Goal was to entertain DSU students, we needed a short but engaging escape room puzzle that is thought-provoking and interactive but with a clear objective because most DSU students found those elements of puzzles the most appealing according to our interview research. 
 =======
 Description:
