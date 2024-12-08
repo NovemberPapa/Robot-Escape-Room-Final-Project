@@ -1,5 +1,4 @@
-# Group 4 
-#Robot Escape Room Project
+# Group 4 - Robot Escape Room Project:
 =======
 Goal of Our Project:
 =======
