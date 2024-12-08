@@ -11,8 +11,6 @@ Our Goal was to entertain DSU students, we needed a short but engaging escape ro
 # Objective:
 =======
 # Our escape room consists of three robots. One is remote-controlled by the player(you). The other two act as enemies. The goal of the escape room is to collect three colored keys(R.G.B) as you navigate through the maze. While trying not to get caught and killed by enemy bots. To win the game you must collect all three keys and escape. There is also a leaderboard for the fastest time to build competitiveness. 
-
-=======
 # Code
 =======
 ## Remote Control Code:
