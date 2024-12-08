@@ -1,19 +1,64 @@
 import cyberpi
 import event
 import mbot2
-
+import mbuild
+import time
 # connect to WiFi
-cyberpi.wifi.connect("Enter WIFI Name", " Enter WIFI Password ")
+cyberpi.wifi.connect("Woah", "hellodudeman")
 while not cyberpi.wifi.is_connect():
- pass
+    pass
+
+def sendmsg(message, num):
+    cyberpi.mesh_broadcast.set(message,num)
+    cyberpi.mesh_broadcast.set("None")
+blue = 0
+green = 0
+purple = 0
+@event.mesh_broadcast('b')
+def on_mesh_broadcast():
+    l1_r = mbuild.quad_rgb_sensor.get_red("L1")
+    l1_g = mbuild.quad_rgb_sensor.get_green("L1")
+    l1_b = mbuild.quad_rgb_sensor.get_blue("L1")
+    global blue
+    global green
+    global purple
+
+    
+    
+    if l1_b>230:
+        cyberpi.console.print('blue')
+        time.sleep(2)
+        sendmsg("Blue", 1)
+        time.sleep(2)
+        sendmsg("Blue",2)
+        blue = 1
+    
+
+    elif l1_g > 150:
+        cyberpi.console.print('green')
+        time.sleep(2)
+        sendmsg("Green", 1)
+        time.sleep(2)
+        sendmsg("Green",2)
+        green = 1
+    
+
+    elif l1_r > 230:
+        cyberpi.console.print('red')
+        time.sleep(2)
+        sendmsg("Purple", 1)
+        time.sleep(2)
+        sendmsg("Purple",2)
+        purple = 1
+    
+
+
+
+
 
 # Connection to WiFi is established at this point
 # So, print connected! on the display
 cyberpi.console.println('Connected!')
-
-player_name = cyberpi.set_name("Jimmy The Hero")
-
-cyberpi.display.clear(), cyberpi.display.show_label(cyberpi.get_name(), 100, "center")
 
 @event.mesh_broadcast('up')
 def on_mesh_broadcast():
@@ -45,4 +90,3 @@ def on_mesh_broadcast():
     mbot2.turn_right(0)
     mbot2.turn_left(0)
     mbot2.backward(0)
-
