@@ -22,6 +22,6 @@ The Nirtous System: was made by: Maxwell Weiss & Isaac Davis - This code allows 
 The Enemy Bot System: was made by: Jerica Fitzgerald & Maxwell Weiss & Isaiah Edgehill - This code makes the enemy bots follow a path of colored tape until the game is over. 
 =======
 ## The Score & Leaderboard System:
-=======The Score & Leaderboard System: was made by: Noah Panto - This code broadcast the start and end of the game as well as the score & time elsapsed with the amount of keys you've collected throughout the game.
+# ======= The Score & Leaderboard System: was made by: Noah Panto - This code broadcast the start and end of the game as well as the score & time elsapsed with the amount of keys you've collected throughout the game.
 ## The Key System:
-=======The Key System: was made by: Jerica Fitzgerald & Maxwell Weiss - This code broadcast a signal to the cyberpi from the mbot and allows it to display which keys where collected
+# ======= The Key System: was made by: Jerica Fitzgerald & Maxwell Weiss - This code broadcast a signal to the cyberpi from the mbot and allows it to display which keys where collected
