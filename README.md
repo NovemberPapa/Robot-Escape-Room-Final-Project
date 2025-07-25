@@ -3,9 +3,9 @@
 ## This was our final project in our Elements of Computer Programming I class during the 2024 fall semester at Delaware State University, under the guidance of Professor Marwan Rasamny. During the class, we learned Python and applied what we learned, along with our studying, to code everything. We used Mbot2's as the player and enemies, using an extra CyberPi for the controller. Everything was coded using mBlock, a graphical programming platform based on Scratch and Python programming. It can be downloaded from www.mblock.com. To play the game yourself, you need at least two mBots and 3 Cyberpi's. You will also need some cardboard, colored paper, and black tape. Once you set up the maze, you can place your enemy bots on their designated paths. Then connect both the Remote Receiver and Sender to the same wifi network, and you're good to go!
 
 ### Remote Control Sender
-The remote control sender is what you will use to control your mBot2. When you press any buttons or move the joystick, it sends the corresponding signal to the remote control receiver, which communicates directly with the mBot to control it. 
+The remote control sender is what you will use to control your mBot2. When you press any buttons or move the joystick, it sends the corresponding signal to the remote control receiver.
 ### Remote Control Receiver
-All basic functions of the mbot are controlled by receiving the signals sent by the sender. 
+All basic functions of the mbot are controlled by receiving the signals sent by the sender, then communicating with the mBot to move it.
 ### The Enemy Bot Pathing:
 This code causes the enemy bots to follow a path marked by black tape until the end of the game. 
 ### The Score & Leaderboard System:
