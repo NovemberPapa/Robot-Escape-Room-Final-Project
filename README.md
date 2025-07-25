@@ -13,10 +13,10 @@ Controls the start and end of the game, as well as the score & time elapsed, alo
 ### The Key System:
 When the right color is detected, this code broadcasts a signal from the receiver to the sender and allows it to display which keys were collected
 
-### Objective:
+## Objective:
 Our escape room consists of three robots. One is remotely controlled by the player (you), the others act as enemies. The goal of the escape room is to collect three colored keys(R.G.B) as you navigate through the maze. At the same time, you are trying to avoid enemy bots who can get in your way and cost you time. To win the game, you must collect all three keys. There is also a leaderboard, allowing you to compete with yourself or friends to see who can achieve the fastest time.
 
-### mBot Controls
+## mBot Controls
 Pressing up on the joystick will move the mBot forward until the input is released.
 Pressing down on the joystick will move the mBot backward until the input is released.
 Pressing the left joystick button will rotate the mBot left until the input is released.
